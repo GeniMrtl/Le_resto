@@ -1,0 +1,545 @@
+@font-face {
+  font-family: "Font-1";
+  src: url(./Font/Allura/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "Font-2";
+  src: url(./Font/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Font-3";
+  src: url(./Font/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto Thin";
+  src: url(./Font/Roboto/Roboto-Thin.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.title-1 {
+  font-family: "Font-1";
+  font-size: 1.5rem;
+  color: rgb(186, 103, 3);
+  text-transform: capitalize;
+}
+
+header {
+  background: url(./img/bg-slider-06.jpg) center/cover;
+  height: 100vh;
+  color: rgb(214, 201, 201);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .logo-container {
+  background: url(./img/favicon.png);
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  font-family: "Font-2";
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+header nav .social-media {
+  display: flex;
+}
+header nav .social-media a {
+  padding: 10px;
+  color: rgb(214, 201, 201);
+}
+header .header-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .header-container h1 {
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  letter-spacing: 10px;
+  margin-top: -10px;
+}
+header .header-container .ic-plate-big {
+  background: url(./img/ic-plate.png) center/cover;
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: 20px;
+}
+header .header-container .tagline {
+  font-family: "Roboto-thin";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.5rem;
+}
+
+main {
+  background: rgb(19, 19, 19);
+}
+main .ic-plate-big {
+  background: url(./img/ic-plate.png) center/cover;
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: 20px;
+  margin: 20px auto;
+}
+main .part-1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: rgb(214, 201, 201);
+}
+main .part-1 .left-part {
+  border: dotted 1px rgb(186, 103, 3);
+  margin: 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .part-1 .left-part h2 {
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  font-size: 0.9rem;
+}
+main .part-1 .left-part p {
+  font-family: "Font-2";
+}
+main .part-1 .left-part .img-container-main {
+  background: url(./img/avatar-01.jpg) center/cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin: 15px auto;
+  margin-bottom: 0px;
+}
+main .part-1 .left-part .name {
+  font-family: "Font-2";
+  font-size: 0.7rem;
+}
+main .part-1 .left-part .title {
+  font-family: "Roboto-thin";
+  text-transform: uppercase;
+  font-size: 0.5rem;
+}
+main .right-part .img-main {
+  background: url(./img/store-01.jpg) center/cover;
+  width: 100%;
+  height: 100%;
+}
+main .menu {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: url(./img/bg-menu-01.jpg) bottom/cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: rgb(19, 19, 19);
+  padding: 40px;
+}
+main .menu .menu-1 ul {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  font-family: "Font-2";
+  justify-content: space-around;
+  color: rgb(214, 201, 201);
+}
+main .menu .menu-1 ul li {
+  position: relative;
+}
+main .menu .menu-1 ul li::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgb(214, 201, 201);
+  position: absolute;
+  bottom: -5px;
+}
+main .menu .menu-2 {
+  border-top: solid 2px rgb(186, 103, 3);
+  width: 80%;
+  background: rgb(214, 201, 201);
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+main .menu .menu-2 .dish {
+  padding: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% 70% 5%;
+  align-items: center;
+  text-align: left;
+  border-top: dotted 1px rgb(75, 75, 75);
+}
+main .menu .menu-2 .dish .img-plat {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin: 15px auto;
+  margin-bottom: 0px;
+  width: 50px;
+  height: 50px;
+}
+main .menu .menu-2 .dish:first-child .img-plat {
+  background: url(./img/dish-item-01.jpg) center/cover;
+}
+main .menu .menu-2 .dish:nth-child(2) .img-plat {
+  background: url(./img/dish-item-03.jpg) center/cover;
+}
+main .menu .menu-2 .dish h4 {
+  font-family: "Font-3";
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: rgb(75, 75, 75);
+}
+main .menu .menu-2 .dish p {
+  font-family: "Font-2";
+  color: rgb(75, 75, 75);
+  font-size: 0.8rem;
+}
+main .menu .menu-2 .dish .prix {
+  font-family: "Font-2";
+  color: rgb(186, 103, 3);
+}
+main .booking {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 50px;
+}
+main .booking .left-part {
+  padding: 10px;
+  background: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main .booking .left-part .left-part-container {
+  padding: 10px;
+  border: dotted 1px rgb(214, 201, 201);
+}
+main .booking .left-part .left-part-container h2 {
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  color: rgb(214, 201, 201);
+  font-size: 1rem;
+}
+main .booking .left-part .left-part-container h3 {
+  text-transform: uppercase;
+  color: rgb(186, 103, 3);
+  font-size: 0.8rem;
+  font-family: "Font-2";
+  margin: 12px;
+}
+main .booking .left-part .left-part-container .booking-hours {
+  color: rgb(214, 201, 201);
+  font-family: "roboto-thin";
+  font-size: 0.8rem;
+}
+main .booking .right-part {
+  background: rgb(214, 201, 201);
+  text-align: center;
+  padding: 40px;
+}
+main .booking .right-part h2 {
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  font-size: 1rem;
+}
+main .booking .right-part .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .booking .right-part form {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30%;
+  border-style: none;
+}
+main .booking .right-part form input {
+  border-style: none;
+  padding: 10px;
+  width: 100%;
+  border-bottom: solid 1px rgb(75, 75, 75);
+  background: transparent;
+  font-family: "roboto-thin";
+  font-size: 0.7rem;
+  text-align: left;
+}
+main .booking .right-part form select {
+  border-style: none;
+  padding: 10px;
+  width: 100%;
+  border-bottom: solid 1px rgb(75, 75, 75);
+  background: transparent;
+  font-family: "roboto-thin";
+  font-size: 0.7rem;
+  text-align: left;
+}
+main .booking input[type=submit] {
+  border-style: none;
+  background: rgb(19, 19, 19);
+  font-size: 0.7rem;
+  border-radius: 40px;
+  color: rgb(214, 201, 201);
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+main .Upcoming-events {
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  min-width: 500px;
+  margin: 50px auto;
+}
+main .Upcoming-events h2 {
+  text-transform: uppercase;
+  font-family: "Font-3";
+  margin-top: -10px;
+  color: rgb(214, 201, 201);
+}
+main .Upcoming-events .events {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 10px;
+  grid-template-areas: "e1 e2" "e3 e2";
+}
+main .Upcoming-events .events h3 {
+  font-family: "Roboto Thin";
+}
+main .Upcoming-events .events h5 {
+  font-family: "Roboto Thin";
+  color: rgb(214, 201, 201);
+  font-size: 1rem;
+}
+main .Upcoming-events .events p {
+  font-family: "Roboto Thin";
+}
+main .Upcoming-events .events button {
+  background: transparent;
+  border-style: none;
+  font-family: "Roboto Thin";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+main .Upcoming-events .events .date-event {
+  width: 70px;
+  height: 70px;
+  background: rgb(19, 19, 19);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+main .Upcoming-events .events .info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  font-size: 0.7rem;
+  padding: 10px;
+  margin: 10px 0;
+  padding-left: 0;
+  width: 100%;
+}
+main .Upcoming-events .events .event-1,
+main .Upcoming-events .events .event-3 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background: rgb(214, 201, 201);
+}
+main .Upcoming-events .events .event-1 .left-part,
+main .Upcoming-events .events .event-3 .left-part {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+main .Upcoming-events .events .event-1 .right-part,
+main .Upcoming-events .events .event-3 .right-part {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+main .Upcoming-events .events .event-1 .right-part h3,
+main .Upcoming-events .events .event-3 .right-part h3 {
+  display: flex;
+  justify-content: flex-start;
+}
+main .Upcoming-events .events .event-1 {
+  grid-area: e1;
+}
+main .Upcoming-events .events .event-1 .left-part {
+  background: url(./img/event-01.jpg) center/cover;
+}
+main .Upcoming-events .events .event-3 {
+  grid-area: e3;
+}
+main .Upcoming-events .events .event-3 .left-part {
+  background: url(./img/event-02.jpg) center/cover;
+}
+main .Upcoming-events .events .event-2 {
+  grid-area: e2;
+  background: url(./img/event-03.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .Upcoming-events .events .event-2 .event-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(214, 201, 201);
+  margin: 20px;
+  padding: 10px;
+  padding-top: 0;
+}
+main .Upcoming-events .events .event-2 .date-event {
+  margin: 0 auto;
+}
+main .Upcoming-events .events .event-2 h3 {
+  margin: 20px;
+}
+main .review {
+  background: url(./img/gmap.jpg) bottom/cover;
+  height: 500px;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .review .review-container {
+  line-height: 30px;
+  width: 80%;
+  margin: 70px auto;
+  padding: 40px;
+  background: rgb(214, 201, 201);
+  font-family: "Roboto-thin";
+  text-align: center;
+  position: relative;
+}
+main .review .review-container::before {
+  content: "";
+  background: url(./img/avatar-02.jpg) center/cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin: 15px auto;
+  margin-bottom: 0px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .review .review-container .name-title {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+main .review .review-container .name-title .name {
+  font-family: "Font-2";
+}
+main .review .review-container .name-title .title {
+  font-size: 0.8rem;
+  margin: 10px auto;
+}
+
+footer {
+  background: url(./img/bg-footer.jpg) center/cover;
+}
+footer .footer-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+footer .footer-container .left-part {
+  margin: 30px;
+}
+footer .footer-container .left-part .title-1 {
+  margin-bottom: 0;
+}
+footer .footer-container .left-part p {
+  color: rgb(214, 201, 201);
+  font-family: "Roboto-thin";
+  font-size: 0.7rem;
+  padding: 10px 0;
+  line-height: 30px;
+}
+footer .footer-container .right-part {
+  padding: 20px;
+  margin: 30px;
+}
+footer .footer-container .right-part .footer-title {
+  text-transform: uppercase;
+  font-family: "Font-2";
+  color: rgb(214, 201, 201);
+  font-size: 0.8rem;
+}
+footer .footer-container .right-part input[type=text] {
+  margin: 10px 0;
+  background: transparent;
+  border: 0.5px solid rgb(75, 75, 75);
+  padding: 5px;
+  outline: none;
+}
+footer .footer-container .right-part input[type=text]:focus {
+  border: solid 1px rgb(214, 201, 201);
+}
+footer .footer-container .right-part .social-container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-container .right-part .social-container .social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+footer .footer-container .right-part .social-container .social-media i {
+  color: rgb(214, 201, 201);
+}
+footer .footer-container .right-part .social-container .social-media i:hover {
+  transform: scale(1.3, 1.3);
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

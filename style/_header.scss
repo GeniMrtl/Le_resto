@@ -1,0 +1,59 @@
+header {
+  background: url(./img/bg-slider-06.jpg) center/cover;
+  height: 100vh;
+  color: $white1;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo-container {
+      background: url(./img/favicon.png);
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        font-family: "Font-2";
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      a {
+        padding: 10px;
+        color: $white1;
+      }
+    }
+  }
+  .header-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      @include title;
+      letter-spacing: 10px;
+      margin-top: -10px;
+    }
+
+    .ic-plate-big {
+      @include plate;
+    }
+
+    .tagline {
+      font-family: "Roboto-thin";
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 0.5rem;
+    }
+  }
+}

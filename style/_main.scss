@@ -1,0 +1,387 @@
+main {
+  background: $black1;
+  .ic-plate-big {
+    @include plate;
+    margin: 20px auto;
+  }
+  .part-1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: $white1;
+
+    .left-part {
+      border: dotted 1px $golden1;
+      margin: 5px;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h2 {
+        @include title;
+        font-size: 0.9rem;
+      }
+
+      p {
+        font-family: "Font-2";
+      }
+
+      .img-container-main {
+        background: url(./img/avatar-01.jpg) center/cover;
+        @include avatar;
+      }
+      .name {
+        font-family: "Font-2";
+        font-size: 0.7rem;
+      }
+      .title {
+        font-family: "Roboto-thin";
+        text-transform: uppercase;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .right-part {
+    .img-main {
+      background: url(./img/store-01.jpg) center/cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menu {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: url(./img/bg-menu-01.jpg) bottom/cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: $black1;
+    padding: 40px;
+
+    .menu-1 {
+      ul {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        font-family: "Font-2";
+        justify-content: space-around;
+        color: $white1;
+        li {
+          position: relative;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $white1;
+            position: absolute;
+            bottom: -5px;
+          }
+        }
+      }
+    }
+    .menu-2 {
+      border-top: solid 2px $golden1;
+      width: 80%;
+      background: $white1;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      .dish {
+        padding: 20px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 25% 70% 5%;
+        align-items: center;
+        text-align: left;
+        border-top: dotted 1px $grey1;
+
+        .img-plat {
+          @include avatar;
+          width: 50px;
+          height: 50px;
+        }
+
+        &:first-child .img-plat {
+          background: url(./img/dish-item-01.jpg) center/cover;
+        }
+        &:nth-child(2) .img-plat {
+          background: url(./img/dish-item-03.jpg) center/cover;
+        }
+
+        h4 {
+          font-family: "Font-3";
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          color: $grey1;
+        }
+        p {
+          font-family: "Font-2";
+          color: $grey1;
+          font-size: 0.8rem;
+        }
+        .prix {
+          font-family: "Font-2";
+          color: $golden1;
+        }
+      }
+    }
+  }
+  .booking {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 50px;
+    .left-part {
+      padding: 10px;
+      background: black;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      .left-part-container {
+        padding: 10px;
+        border: dotted 1px $white1;
+        h2 {
+          @include title;
+          color: $white1;
+          font-size: 1rem;
+        }
+        h3 {
+          text-transform: uppercase;
+          color: $golden1;
+          font-size: 0.8rem;
+          font-family: "Font-2";
+          margin: 12px;
+        }
+        .booking-hours {
+          color: $white1;
+          font-family: "roboto-thin";
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .right-part {
+      background: $white1;
+      text-align: center;
+      padding: 40px;
+
+      h2 {
+        @include title;
+        font-size: 1rem;
+      }
+      .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 30% 30%;
+        border-style: none;
+
+        input {
+          border-style: none;
+          padding: 10px;
+          width: 100%;
+          border-bottom: solid 1px $grey1;
+          background: transparent;
+          font-family: "roboto-thin";
+          font-size: 0.7rem;
+          text-align: left;
+        }
+        select {
+          border-style: none;
+          padding: 10px;
+          width: 100%;
+          border-bottom: solid 1px $grey1;
+          background: transparent;
+          font-family: "roboto-thin";
+          font-size: 0.7rem;
+          text-align: left;
+        }
+      }
+    }
+    input[type="submit"] {
+      border-style: none;
+      background: $black1;
+      font-size: 0.7rem;
+      border-radius: 40px;
+      color: $white1;
+      @include title;
+      text-align: center;
+      padding: 10px;
+      letter-spacing: 5px;
+      margin-top: 20px;
+    }
+  }
+  .Upcoming-events {
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    min-width: 500px;
+    margin: 50px auto;
+    h2 {
+      @include title;
+      color: $white1;
+    }
+    .events {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      gap: 10px;
+      grid-template-areas:
+        "e1 e2"
+        "e3 e2";
+
+      h3 {
+        font-family: "Roboto Thin";
+      }
+      h5 {
+        font-family: "Roboto Thin";
+        color: $white1;
+        font-size: 1rem;
+      }
+      p {
+        font-family: "Roboto Thin";
+      }
+      button {
+        background: transparent;
+        border-style: none;
+        font-family: "Roboto Thin";
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .date-event {
+        width: 70px;
+        height: 70px;
+        background: $black1;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+        margin: 10px auto;
+      }
+      .info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        font-size: 0.7rem;
+        padding: 10px;
+        margin: 10px 0;
+        padding-left: 0;
+        width: 100%;
+      }
+      .event-1,
+      .event-3 {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        background: $white1;
+        .left-part {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+        }
+        .right-part {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          h3 {
+            display: flex;
+            justify-content: flex-start;
+          }
+        }
+      }
+      .event-1 {
+        grid-area: e1;
+        .left-part {
+          background: url(./img/event-01.jpg) center/cover;
+        }
+      }
+      .event-3 {
+        grid-area: e3;
+        .left-part {
+          background: url(./img/event-02.jpg) center/cover;
+        }
+      }
+      .event-2 {
+        grid-area: e2;
+        background: url(./img/event-03.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .event-container {
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: $white1;
+          margin: 20px;
+          padding: 10px;
+          padding-top: 0;
+        }
+        .date-event {
+          margin: 0 auto;
+        }
+        h3 {
+          margin: 20px;
+        }
+      }
+    }
+  }
+  .review {
+    background: url(./img/gmap.jpg) bottom/cover;
+    height: 500px;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .review-container {
+      line-height: 30px;
+      width: 80%;
+      margin: 70px auto;
+      padding: 40px;
+      background: $white1;
+      font-family: "Roboto-thin";
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        background: url(./img/avatar-02.jpg) center/cover;
+        @include avatar;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .name-title {
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        .name {
+          font-family: "Font-2";
+        }
+        .title {
+          font-size: 0.8rem;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}
