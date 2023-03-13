@@ -1,5 +1,8 @@
 footer {
   background: url(./img/bg-footer.jpg) center/cover;
+  @media screen and (max-width: 500px) {
+    background: $black1;
+  }
 
   .footer-container {
     display: grid;
@@ -8,8 +11,15 @@ footer {
     gap: 10px;
     width: 80%;
     margin: 0 auto;
+    @media screen and (max-width: 500px) {
+      display: grid;
+      grid-template-columns: 100%;
+    }
     .left-part {
       margin: 30px;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
       .title-1 {
         margin-bottom: 0;
       }
@@ -24,6 +34,16 @@ footer {
     .right-part {
       padding: 20px;
       margin: 30px;
+      @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+      }
+      form {
+        @media screen and (max-width: 500px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
       .footer-title {
         text-transform: uppercase;
         font-family: "Font-2";

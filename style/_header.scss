@@ -1,6 +1,7 @@
 header {
   background: url(./img/bg-slider-06.jpg) center/cover;
   height: 100vh;
+
   color: $white1;
   nav {
     display: flex;
@@ -15,6 +16,9 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
 
       li {
         font-family: "Font-2";
@@ -54,6 +58,11 @@ header {
       text-transform: uppercase;
       letter-spacing: 5px;
       font-size: 0.5rem;
+      @media screen and (max-width: 500px) {
+        font-family: "Font-2";
+        font-size: 1rem;
+        text-align: center;
+      }
     }
   }
 }
