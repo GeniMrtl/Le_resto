@@ -1,68 +1,75 @@
 header {
   background: url(./img/bg-slider-06.jpg) center/cover;
   height: 100vh;
-
   color: $white1;
+  padding: 0 20px;
   nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 82% 10%;
     align-items: center;
-    justify-content: center;
-
-    .logo-container {
-      background: url(./img/favicon.png);
+    max-width: 1100px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+      display: grid;
+      grid-template-columns: 50% 10% 40%;
     }
 
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @media screen and (max-width: 500px) {
-        display: none;
-      }
-
-      li {
-        font-family: "Font-2";
-        padding: 10px;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-      }
-    }
-
-    .social-media {
-      display: flex;
-      a {
-        padding: 10px;
-        color: $white1;
-      }
+    .title-1 {
+      font-size: 1.8rem;
+      color: $white1;
+      text-align: left;
     }
   }
-  .header-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    h1 {
-      @include title;
-      letter-spacing: 10px;
-      margin-top: -10px;
+  ul {
+    @include alignChildren(space-around);
+    @media screen and (max-width: 600px) {
+      visibility: hidden;
+      padding: 0 30px;
     }
 
-    .ic-plate-big {
-      @include plate;
-    }
-
-    .tagline {
-      font-family: "Roboto-thin";
+    li {
+      padding: 10px;
       text-transform: uppercase;
-      letter-spacing: 5px;
-      font-size: 0.5rem;
-      @media screen and (max-width: 500px) {
-        font-family: "Font-2";
-        font-size: 1rem;
-        text-align: center;
-      }
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    a {
+      padding: 10px;
+      color: $white1;
+    }
+  }
+}
+.header-container {
+  margin-top: -150px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    @include title;
+    letter-spacing: 10px;
+    margin-top: -20px;
+  }
+
+  .ic-plate-big {
+    @include plate;
+  }
+
+  .tagline {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    @media screen and (max-width: 500px) {
+      font-family: $font2;
+      font-size: 1rem;
+      text-align: center;
     }
   }
 }

@@ -1,18 +1,14 @@
 @font-face {
-  font-family: "Font-1";
+  font-family: "Allura";
   src: url(./Font/Allura/Allura-Regular.ttf);
 }
 @font-face {
-  font-family: "Font-2";
-  src: url(./Font/Poppins/Poppins-Regular.ttf);
+  font-family: "Poppins";
+  src: url(./Font/Poppins/Poppins-Medium.ttf);
 }
 @font-face {
-  font-family: "Font-3";
-  src: url(./Font/Roboto/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "Roboto Thin";
-  src: url(./Font/Roboto/Roboto-Thin.ttf);
+  font-family: "Roboto";
+  src: url(./Font/Roboto/Roboto-Light.ttf);
 }
 * {
   margin: 0;
@@ -21,8 +17,18 @@
   list-style: none;
 }
 
+li {
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  font-family: Roboto, serif;
+  background: rgb(19, 19, 19);
+}
+
 .title-1 {
-  font-family: "Font-1";
+  font-family: Allura, cursive;
   font-size: 1.5rem;
   color: rgb(186, 103, 3);
   text-transform: capitalize;
@@ -31,69 +37,82 @@
 header {
   background: url(./img/bg-slider-06.jpg) center/cover;
   height: 100vh;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
+  padding: 0 20px;
 }
 header nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 82% 10%;
   align-items: center;
-  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-header nav .logo-container {
-  background: url(./img/favicon.png);
-}
-header nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-width: 500px) {
-  header nav ul {
-    display: none;
+@media screen and (max-width: 600px) {
+  header nav {
+    display: grid;
+    grid-template-columns: 50% 10% 40%;
   }
 }
-header nav ul li {
-  font-family: "Font-2";
+header nav .title-1 {
+  font-size: 1.8rem;
+  color: rgb(233, 233, 233);
+  text-align: left;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  header ul {
+    visibility: hidden;
+    padding: 0 30px;
+  }
+}
+header ul li {
   padding: 10px;
   text-transform: uppercase;
   font-size: 0.8rem;
+  cursor: pointer;
 }
-header nav .social-media {
+header .social-media {
   display: flex;
 }
-header nav .social-media a {
+header .social-media a {
   padding: 10px;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
 }
-header .header-container {
+
+.header-container {
+  margin-top: -150px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-header .header-container h1 {
+.header-container h1 {
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
   letter-spacing: 10px;
-  margin-top: -10px;
+  margin-top: -20px;
 }
-header .header-container .ic-plate-big {
+.header-container .ic-plate-big {
   background: url(./img/ic-plate.png) center/cover;
   display: block;
   height: 20px;
   width: 20px;
   margin: 20px;
 }
-header .header-container .tagline {
-  font-family: "Roboto-thin";
+.header-container .tagline {
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 @media screen and (max-width: 500px) {
-  header .header-container .tagline {
-    font-family: "Font-2";
+  .header-container .tagline {
+    font-family: Poppins, serif;
     font-size: 1rem;
     text-align: center;
   }
@@ -113,55 +132,57 @@ main .ic-plate-big {
 main .part-1 {
   display: grid;
   grid-template-columns: 50% 50%;
-  background: rgb(214, 201, 201);
+  background: rgb(233, 233, 233);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main .part-1 {
     display: grid;
-    grid-template-columns: 100% 0;
+    grid-template-columns: 1fr;
   }
 }
 main .part-1 .left-part {
-  border: dotted 1px rgb(186, 103, 3);
+  border: dashed 1px rgb(186, 103, 3);
   margin: 5px;
-  padding: 10px;
+  padding: 30px 15px;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 main .part-1 .left-part h2 {
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
   font-size: 0.9rem;
+  margin-top: -12px;
 }
 main .part-1 .left-part p {
-  font-family: "Roboto-thin";
   padding: 20px;
 }
 main .part-1 .left-part .img-container-main {
   background: url(./img/avatar-01.jpg) center/cover;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100px;
   margin: 15px auto;
   margin-bottom: 0px;
 }
 main .part-1 .left-part .name {
-  font-family: "Font-2";
+  font-family: Poppins, serif;
+  font-weight: 100;
   font-size: 0.7rem;
+  margin: 0;
 }
 main .part-1 .left-part .title {
-  font-family: "Roboto-thin";
   text-transform: uppercase;
   font-size: 0.5rem;
+  margin: 0;
 }
 main .right-part .img-main {
   background: url(./img/store-01.jpg) center/cover;
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main .right-part .img-main {
     display: none;
   }
@@ -171,41 +192,51 @@ main .menu {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: url(./img/bg-menu-01.jpg) bottom/cover;
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: rgb(19, 19, 19);
   padding: 40px;
+  position: relative;
+}
+main .menu::after {
+  content: "";
+  position: absolute;
+  height: 430px;
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  background: url(./img/bg-menu-01.jpg) center/cover;
 }
 main .menu .menu-1 ul {
   width: 70%;
   margin: 0 auto;
   display: flex;
-  font-family: "Font-2";
+  font-family: Poppins, serif;
   justify-content: space-around;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
+  max-width: 800px;
+  min-width: 500px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main .menu .menu-1 ul {
-    width: 100%;
+    min-width: 200px;
+    width: 90%;
     font-size: 0.8rem;
   }
 }
 main .menu .menu-1 ul li {
   position: relative;
-}
-main .menu .menu-1 ul li::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: rgb(214, 201, 201);
-  position: absolute;
-  bottom: -5px;
+  border-bottom: 2px solid rgb(233, 233, 233);
+  padding-bottom: 5px;
 }
 main .menu .menu-2 {
+  z-index: 100;
+  position: relative;
   border-top: solid 2px rgb(186, 103, 3);
-  width: 80%;
-  background: rgb(214, 201, 201);
+  width: 85%;
+  max-width: 800px;
+  background: rgb(233, 233, 233);
   margin: 30px auto;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -214,7 +245,7 @@ main .menu .menu-2 {
 @media screen and (max-width: 600px) {
   main .menu .menu-2 {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-row: repeat;
     width: 90%;
   }
@@ -228,19 +259,22 @@ main .menu .menu-2 .dish {
   text-align: left;
   border-top: dotted 1px rgb(75, 75, 75);
 }
+main .menu .menu-2 .dish:first-child, main .menu .menu-2 .dish:nth-child(2) {
+  border-top: none;
+}
 @media screen and (max-width: 600px) {
   main .menu .menu-2 .dish {
     grid-template-columns: 25% 60% 5%;
   }
 }
 main .menu .menu-2 .dish .img-plat {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100px;
   margin: 15px auto;
   margin-bottom: 0px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 main .menu .menu-2 .dish:first-child .img-plat {
   background: url(./img/dish-item-01.jpg) center/cover;
@@ -249,71 +283,79 @@ main .menu .menu-2 .dish:nth-child(2) .img-plat {
   background: url(./img/dish-item-03.jpg) center/cover;
 }
 main .menu .menu-2 .dish h4 {
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   text-transform: uppercase;
   font-size: 0.8rem;
   color: rgb(75, 75, 75);
 }
 main .menu .menu-2 .dish p {
-  font-family: "Font-2";
   color: rgb(75, 75, 75);
   font-size: 0.8rem;
 }
 main .menu .menu-2 .dish .prix {
-  font-family: "Font-2";
   color: rgb(186, 103, 3);
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: grid;
+  height: 100%;
+  align-items: center;
 }
 main .booking {
+  position: relative;
   width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 40% 60%;
+  max-width: 1050px;
   margin-top: 50px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   main .booking {
     display: flex;
     flex-direction: column;
   }
 }
 main .booking .left-part {
-  padding: 10px;
+  width: 100%;
   background: black;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 main .booking .left-part .left-part-container {
-  padding: 10px;
-  border: dotted 1px rgb(214, 201, 201);
+  width: 100%;
+  padding: 20px;
+  border: dotted 1px rgb(233, 233, 233);
 }
 main .booking .left-part .left-part-container h2 {
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
   font-size: 1rem;
 }
 main .booking .left-part .left-part-container h3 {
   text-transform: uppercase;
   color: rgb(186, 103, 3);
   font-size: 0.8rem;
-  font-family: "Font-2";
+  font-family: Poppins, serif;
   margin: 12px;
+  margin-bottom: 0;
 }
 main .booking .left-part .left-part-container .booking-hours {
-  color: rgb(214, 201, 201);
-  font-family: "roboto-thin";
+  color: rgb(233, 233, 233);
   font-size: 0.8rem;
 }
 main .booking .right-part {
-  background: rgb(214, 201, 201);
+  background: rgb(233, 233, 233);
   text-align: center;
   padding: 40px;
 }
 main .booking .right-part h2 {
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
   font-size: 1rem;
 }
@@ -340,14 +382,17 @@ main .booking .right-part form {
 main .booking .right-part form input {
   border-style: none;
   padding: 10px;
+  margin: 10px;
   width: 100%;
   border-bottom: solid 1px rgb(75, 75, 75);
   background: transparent;
   font-family: "roboto-thin";
   font-size: 0.7rem;
   text-align: left;
+  outline: none;
 }
 main .booking .right-part form select {
+  margin: 10px;
   border-style: none;
   padding: 10px;
   width: 100%;
@@ -356,20 +401,27 @@ main .booking .right-part form select {
   font-family: "roboto-thin";
   font-size: 0.7rem;
   text-align: left;
+  outline: none;
 }
 main .booking input[type=submit] {
   border-style: none;
   background: rgb(19, 19, 19);
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   border-radius: 40px;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
   text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
   padding: 10px;
   letter-spacing: 5px;
   margin-top: 20px;
+}
+main .booking input[type=submit]:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.269);
 }
 main .Upcoming-events {
   justify-content: center;
@@ -385,9 +437,9 @@ main .Upcoming-events {
 }
 main .Upcoming-events h2 {
   text-transform: uppercase;
-  font-family: "Font-3";
+  font-family: Poppins, serif;
   margin-top: -10px;
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
 }
 main .Upcoming-events .events {
   display: grid;
@@ -397,15 +449,15 @@ main .Upcoming-events .events {
   grid-template-areas: "e1 e2" "e3 e2";
 }
 main .Upcoming-events .events h3 {
-  font-family: "Roboto Thin";
+  font-family: Roboto, serif;
 }
 main .Upcoming-events .events h5 {
-  font-family: "Roboto Thin";
-  color: rgb(214, 201, 201);
+  font-family: Roboto, serif;
+  color: rgb(233, 233, 233);
   font-size: 1rem;
 }
 main .Upcoming-events .events p {
-  font-family: "Roboto Thin";
+  font-family: Roboto, serif;
 }
 main .Upcoming-events .events button {
   background: transparent;
@@ -437,11 +489,19 @@ main .Upcoming-events .events .info {
   padding-left: 0;
   width: 100%;
 }
+main .Upcoming-events .events .info i {
+  margin: 3px;
+  font-size: 0.7rem;
+  transform: translateX(-2px);
+}
+main .Upcoming-events .events .info i:nth-child(2) {
+  margin-left: 10px;
+}
 main .Upcoming-events .events .event-1,
 main .Upcoming-events .events .event-3 {
   display: grid;
   grid-template-columns: 30% 70%;
-  background: rgb(214, 201, 201);
+  background: rgb(233, 233, 233);
 }
 main .Upcoming-events .events .event-1 .left-part,
 main .Upcoming-events .events .event-3 .left-part {
@@ -456,6 +516,7 @@ main .Upcoming-events .events .event-3 .right-part {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: left;
 }
 main .Upcoming-events .events .event-1 .right-part h3,
 main .Upcoming-events .events .event-3 .right-part h3 {
@@ -483,11 +544,11 @@ main .Upcoming-events .events .event-2 {
   text-align: center;
 }
 main .Upcoming-events .events .event-2 .event-container {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(214, 201, 201);
+  background: rgb(233, 233, 233);
   margin: 20px;
   padding: 10px;
   padding-top: 0;
@@ -499,29 +560,41 @@ main .Upcoming-events .events .event-2 h3 {
   margin: 20px;
 }
 main .review {
-  background: url(./img/gmap.jpg) bottom/cover;
-  height: 500px;
-  background-size: 100% 50%;
-  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0 200px;
+}
+main .review:after {
+  content: "";
+  height: 350px;
+  width: 100%;
+  background: url(./img/gmap.jpg) center/cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 main .review .review-container {
+  z-index: 10000;
+  position: relative;
   line-height: 30px;
   width: 80%;
   margin: 70px auto;
   padding: 40px;
-  background: rgb(214, 201, 201);
-  font-family: "Roboto-thin";
+  background: rgb(233, 233, 233);
+  font-family: Roboto, serif;
   text-align: center;
   position: relative;
+}
+main .review .review-container p {
+  margin-top: 30px;
 }
 main .review .review-container::before {
   content: "";
   background: url(./img/avatar-02.jpg) center/cover;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100px;
   margin: 15px auto;
   margin-bottom: 0px;
@@ -536,15 +609,17 @@ main .review .review-container .name-title {
   flex-direction: column;
 }
 main .review .review-container .name-title .name {
-  font-family: "Font-2";
+  font-family: Poppins, serif;
 }
 main .review .review-container .name-title .title {
+  font-family: Roboto, serif;
   font-size: 0.8rem;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 footer {
   background: url(./img/bg-footer.jpg) center/cover;
+  text-align: left;
 }
 @media screen and (max-width: 500px) {
   footer {
@@ -562,7 +637,7 @@ footer .footer-container {
 @media screen and (max-width: 500px) {
   footer .footer-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
   }
 }
 footer .footer-container .left-part {
@@ -577,8 +652,7 @@ footer .footer-container .left-part .title-1 {
   margin-bottom: 0;
 }
 footer .footer-container .left-part p {
-  color: rgb(214, 201, 201);
-  font-family: "Roboto-thin";
+  color: rgb(233, 233, 233);
   font-size: 0.7rem;
   padding: 10px 0;
   line-height: 30px;
@@ -586,6 +660,8 @@ footer .footer-container .left-part p {
 footer .footer-container .right-part {
   padding: 20px;
   margin: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 @media screen and (max-width: 700px) {
   footer .footer-container .right-part {
@@ -593,7 +669,7 @@ footer .footer-container .right-part {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   footer .footer-container .right-part form {
     display: flex;
     flex-direction: column;
@@ -601,19 +677,20 @@ footer .footer-container .right-part {
 }
 footer .footer-container .right-part .footer-title {
   text-transform: uppercase;
-  font-family: "Font-2";
-  color: rgb(214, 201, 201);
-  font-size: 0.8rem;
+  font-family: Poppins, serif;
+  color: rgb(233, 233, 233);
+  font-size: 0.7rem;
+  width: 100%;
 }
 footer .footer-container .right-part input[type=text] {
   margin: 10px 0;
   background: transparent;
-  border: 0.5px solid rgb(75, 75, 75);
+  border: 0.5px solid rgba(255, 208, 128, 0.294);
   padding: 5px;
   outline: none;
 }
 footer .footer-container .right-part input[type=text]:focus {
-  border: solid 1px rgb(214, 201, 201);
+  border: solid 1px rgb(233, 233, 233);
 }
 footer .footer-container .right-part .social-container {
   display: flex;
@@ -622,10 +699,12 @@ footer .footer-container .right-part .social-container {
 footer .footer-container .right-part .social-container .social-media {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 80%;
+  margin-left: 20px;
 }
 footer .footer-container .right-part .social-container .social-media i {
-  color: rgb(214, 201, 201);
+  color: rgb(233, 233, 233);
+  padding: 0 10px;
 }
 footer .footer-container .right-part .social-container .social-media i:hover {
   transform: scale(1.3, 1.3);

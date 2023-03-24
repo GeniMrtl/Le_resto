@@ -8,15 +8,15 @@ main {
     display: grid;
     grid-template-columns: 50% 50%;
     background: $white1;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 600px) {
       display: grid;
-      grid-template-columns: 100% 0;
+      grid-template-columns: 1fr;
     }
 
     .left-part {
-      border: dotted 1px $golden1;
+      border: dashed 1px $color1;
       margin: 5px;
-      padding: 10px;
+      padding: 30px 15px;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -24,10 +24,10 @@ main {
       h2 {
         @include title;
         font-size: 0.9rem;
+        margin-top: -12px;
       }
 
       p {
-        font-family: "Roboto-thin";
         padding: 20px;
       }
 
@@ -36,13 +36,15 @@ main {
         @include avatar;
       }
       .name {
-        font-family: "Font-2";
+        font-family: $font2;
+        font-weight: 100;
         font-size: 0.7rem;
+        margin: 0;
       }
       .title {
-        font-family: "Roboto-thin";
         text-transform: uppercase;
         font-size: 0.5rem;
+        margin: 0;
       }
     }
   }
@@ -52,7 +54,7 @@ main {
       background: url(./img/store-01.jpg) center/cover;
       width: 100%;
       height: 100%;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 600px) {
         display: none;
       }
     }
@@ -62,40 +64,51 @@ main {
     justify-content: center;
     text-align: center;
     position: relative;
-    background: url(./img/bg-menu-01.jpg) bottom/cover;
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: $black1;
     padding: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 430px;
+      width: 100%;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%);
+      background: url(./img/bg-menu-01.jpg) center/cover;
+    }
 
     .menu-1 {
       ul {
         width: 70%;
         margin: 0 auto;
         display: flex;
-        font-family: "Font-2";
+        font-family: $font2;
         justify-content: space-around;
         color: $white1;
-        @media screen and (max-width: 500px) {
-          width: 100%;
+        max-width: 800px;
+
+        min-width: 500px;
+        @media screen and (max-width: 600px) {
+          min-width: 200px;
+          width: 90%;
           font-size: 0.8rem;
         }
         li {
           position: relative;
-          &::before {
-            content: "";
-            width: 100%;
-            height: 1px;
-            background: $white1;
-            position: absolute;
-            bottom: -5px;
-          }
+          border-bottom: 2px solid $white1;
+          padding-bottom: 5px;
         }
       }
     }
     .menu-2 {
-      border-top: solid 2px $golden1;
-      width: 80%;
+      z-index: 100;
+      position: relative;
+      border-top: solid 2px $color1;
+      width: 85%;
+      max-width: 800px;
       background: $white1;
       margin: 30px auto;
       display: grid;
@@ -103,7 +116,7 @@ main {
       grid-template-rows: 1fr 1fr 1fr 1fr;
       @media screen and (max-width: 600px) {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-row: repeat;
         width: 90%;
       }
@@ -115,14 +128,18 @@ main {
         align-items: center;
         text-align: left;
         border-top: dotted 1px $grey1;
+        &:first-child,
+        &:nth-child(2) {
+          border-top: none;
+        }
         @media screen and (max-width: 600px) {
           grid-template-columns: 25% 60% 5%;
         }
 
         .img-plat {
           @include avatar;
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
         }
 
         &:first-child .img-plat {
@@ -133,42 +150,50 @@ main {
         }
 
         h4 {
-          font-family: "Font-3";
+          font-family: $font2;
           text-transform: uppercase;
           font-size: 0.8rem;
           color: $grey1;
         }
         p {
-          font-family: "Font-2";
           color: $grey1;
           font-size: 0.8rem;
         }
         .prix {
-          font-family: "Font-2";
-          color: $golden1;
+          color: $color1;
+          font-weight: 600;
+          font-size: 0.8rem;
+          display: grid;
+          height: 100%;
+          align-items: center;
         }
       }
     }
   }
   .booking {
+    position: relative;
     width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 40% 60%;
+    max-width: 1050px;
     margin-top: 50px;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 800px) {
       display: flex;
       flex-direction: column;
     }
     .left-part {
-      padding: 10px;
+      width: 100%;
       background: black;
+      display: flex;
       text-align: center;
       justify-content: center;
       align-items: center;
+      padding: 30px;
 
       .left-part-container {
-        padding: 10px;
+        width: 100%;
+        padding: 20px;
         border: dotted 1px $white1;
         h2 {
           @include title;
@@ -177,14 +202,14 @@ main {
         }
         h3 {
           text-transform: uppercase;
-          color: $golden1;
+          color: $color1;
           font-size: 0.8rem;
-          font-family: "Font-2";
+          font-family: $font2;
           margin: 12px;
+          margin-bottom: 0;
         }
         .booking-hours {
           color: $white1;
-          font-family: "roboto-thin";
           font-size: 0.8rem;
         }
       }
@@ -219,14 +244,17 @@ main {
         input {
           border-style: none;
           padding: 10px;
+          margin: 10px;
           width: 100%;
           border-bottom: solid 1px $grey1;
           background: transparent;
           font-family: "roboto-thin";
           font-size: 0.7rem;
           text-align: left;
+          outline: none;
         }
         select {
+          margin: 10px;
           border-style: none;
           padding: 10px;
           width: 100%;
@@ -235,20 +263,27 @@ main {
           font-family: "roboto-thin";
           font-size: 0.7rem;
           text-align: left;
+          outline: none;
         }
       }
     }
     input[type="submit"] {
       border-style: none;
       background: $black1;
-      font-size: 0.7rem;
+      font-size: 0.5rem;
       border-radius: 40px;
       color: $white1;
       @include title;
       text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
       padding: 10px;
       letter-spacing: 5px;
       margin-top: 20px;
+      &:hover {
+        transform: translateX(2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.269);
+      }
     }
   }
   .Upcoming-events {
@@ -274,16 +309,17 @@ main {
         "e3 e2";
 
       h3 {
-        font-family: "Roboto Thin";
+        font-family: $font3;
       }
       h5 {
-        font-family: "Roboto Thin";
+        font-family: $font3;
         color: $white1;
         font-size: 1rem;
       }
       p {
-        font-family: "Roboto Thin";
+        font-family: $font3;
       }
+
       button {
         background: transparent;
         border-style: none;
@@ -313,6 +349,14 @@ main {
         margin: 10px 0;
         padding-left: 0;
         width: 100%;
+        i {
+          margin: 3px;
+          font-size: 0.7rem;
+          transform: translateX(-2px);
+          &:nth-child(2) {
+            margin-left: 10px;
+          }
+        }
       }
       .event-1,
       .event-3 {
@@ -330,6 +374,7 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
+          text-align: left;
           h3 {
             display: flex;
             justify-content: flex-start;
@@ -356,7 +401,7 @@ main {
         align-items: center;
         text-align: center;
         .event-container {
-          width: 80%;
+          width: 90%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -375,23 +420,35 @@ main {
     }
   }
   .review {
-    background: url(./img/gmap.jpg) bottom/cover;
-    height: 500px;
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px 0 200px;
+    &:after {
+      content: "";
+      height: 350px;
+      width: 100%;
+      background: url(./img/gmap.jpg) center/cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     .review-container {
+      z-index: 10000;
+      position: relative;
       line-height: 30px;
       width: 80%;
       margin: 70px auto;
       padding: 40px;
       background: $white1;
-      font-family: "Roboto-thin";
+      font-family: $font3;
       text-align: center;
       position: relative;
+      p {
+        margin-top: 30px;
+      }
 
       &::before {
         content: "";
@@ -407,11 +464,12 @@ main {
         display: flex;
         flex-direction: column;
         .name {
-          font-family: "Font-2";
+          font-family: $font2;
         }
         .title {
+          font-family: $font3;
           font-size: 0.8rem;
-          margin: 10px auto;
+          margin: 0 auto;
         }
       }
     }
